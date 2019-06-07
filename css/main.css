@@ -257,17 +257,17 @@ nav ul li a {
     background: #ebebeb;
 }
 
-#contact .half-width {
+#contact .contact-info {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    text-align: center;
 }
 
 #contact .contact-image {
     border: 10px solid white;
-    margin: 10% auto;
     display: block;
+    margin: 50px auto;
     width: 90%;
 }
 
@@ -391,13 +391,18 @@ nav ul li a {
 
     .full-width {
         display: flex;
-        justify-content: space-between;
     }
 
     /*** header tablet styles ***/
 
     header {
         min-height: 700px;
+    }
+
+    header .full-width {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
     header h1 {
@@ -479,13 +484,19 @@ nav ul li a {
 
     #contact .full-width {
         display: flex;
+        flex-flow: row wrap;
         justify-content: space-between;
+        align-items: flex-start;
     }
-    
-    #contact .half-width {
-        flex-direction: column;
-        justify-content: space-between;
-        width: 48%;
+
+    #contact .contact-image,
+    #contact .contact-info {
+        width: 45%;
+        margin: 0;
+    }
+
+    #contact .contact-image img {
+        width: 100%;
     }
 
 }
@@ -495,29 +506,21 @@ nav ul li a {
 
     html {
         font-size: 16px;
+        display: flex;
+        justify-content: center;
     }
 
     body {
         display: flex;
+        flex-flow: column wrap;
         justify-content: center;
+        align-items: center;
+        max-width: 1200px;
     }
 
     header h1 {
         margin-top: 0;
         width: 75%;
-    }
-
-    #contact .contact-image,
-    #contact .full-width .half-width h3 {
-        margin: 0;
-    }
-
-    #contact ul {
-        width: 70%;
-    }
-
-    #contact .contact-icons img {
-        height: 2em;
     }
 
 }
